@@ -18,11 +18,11 @@ CREATE TABLE schedule(
 );
 
 
---SELECT * FROM countries;
---SELECT * FROM schedule;
+SELECT * FROM countries;
+SELECT * FROM schedule;
 
---DROP TABLE schedule;
---DROP TABLE countries;
+DROP TABLE schedule;
+DROP TABLE countries;
 ```
 
 
