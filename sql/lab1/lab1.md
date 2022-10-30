@@ -16,12 +16,6 @@ CREATE TABLE clients(
     id_country numeric(24) NOT NULL REFERENCES countries(id), 
     UNIQUE(last_name, first_name, second_name)
 );
-
-SELECT * FROM countries;
-SELECT * FROM clients;
-
-DROP TABLE clients;
-DROP TABLE countries;
 ```
 
 ## Вариант 2
@@ -62,13 +56,6 @@ CREATE TABLE schedule(
     count_of_stops integer NOT NULL CHECK(count_of_stops > 0), 
     id_country_of_train_operator numeric(3) NOT NULL REFERENCES countries(id)
 );
-
-
-SELECT * FROM countries;
-SELECT * FROM schedule;
-
-DROP TABLE schedule;
-DROP TABLE countries;
 ```
 
 
