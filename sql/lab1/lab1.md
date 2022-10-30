@@ -1,3 +1,29 @@
+## Вариант 1
+```sql
+CREATE TABLE countries(
+    id NUMERIC(24) PRIMARY KEY, 
+    name varchar(64) NOT NULL
+); 
+
+CREATE TABLE clients(
+    id integer PRIMARY KEY, 
+    last_name varchar(200) NOT NULL,
+    first_name varchar(200) NOT NULL,
+    second_name varchar(200) NOT NULL,
+    phone varchar(16) NOT NULL,
+    passport_number varchar(16) NOT NULL,
+    discount numeric(3,2) NOT NULL CHECK(discount >= 0 and discount <= 0.99) DEFAULT 0, 
+    id_country numeric(24) NOT NULL REFERENCES countries(id), 
+    UNIQUE(last_name, first_name, second_name)
+);
+
+SELECT * FROM countries;
+SELECT * FROM clients;
+
+DROP TABLE clients;
+DROP TABLE countries;
+```
+
 ## Вариант 4 
 ```sql
 CREATE TABLE countries(
