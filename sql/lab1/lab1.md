@@ -24,6 +24,26 @@ DROP TABLE clients;
 DROP TABLE countries;
 ```
 
+## Вариант 2
+```sql
+CREATE TABLE countries(
+    id integer PRIMARY KEY, 
+    name varchar(64) NOT NULL
+); 
+
+CREATE TABLE books(
+    isbn varchar(32) PRIMARY KEY, 
+    name varchar(2000) NOT NULL UNIQUE,
+    authors varchar(2000) NOT NULL,
+    publisher varchar(2000) NOT NULL,
+    publish_year numeric(4) DEFAULT 2016,
+    pages_count numeric(4),
+    price numeric(6) NOT NULL,
+    id_country integer NOT NULL REFERENCES countries(id),
+    CHECK(year > 0 and pages_count > 0)
+); 
+```
+
 ## Вариант 4 
 ```sql
 CREATE TABLE countries(
