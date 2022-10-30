@@ -1,5 +1,5 @@
 ## Вариант 4 
-```
+```sql
 CREATE TABLE countries(
     id NUMERIC(3) PRIMARY KEY, 
     name varchar(64) NOT NULL
