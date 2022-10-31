@@ -37,6 +37,7 @@ CREATE TABLE books(
     CHECK(year > 0 and pages_count > 0)
 ); 
 ```
+
 ## Вариант 3
 ```sql
 CREATE TABLE countries(
@@ -98,8 +99,8 @@ CREATE TABLE dishes(
     CHECK(difficulty IN ('легкое', 'для опытного кулинара', 'для профессионала'))
 ); 
 ```
-## Вариант 6
 
+## Вариант 6
 ```sql 
 CREATE TABLE countries(
     id integer PRIMARY KEY, 
@@ -120,6 +121,7 @@ CREATE TABLE patient(
 );
 ```
 
+## Вариант 7 
 ```sql 
 CREATE TABLE countries(
     id integer PRIMARY KEY, 
