@@ -77,4 +77,25 @@ CREATE TABLE schedule(
 );
 ```
 
+## Вариант 5
+```sql
+CREATE TABLE countries(
+    id integer PRIMARY KEY, 
+    name varchar(64)
+); 
+
+CREATE TABLE dishes(
+    number integer PRIMARY KEY, 
+    name varchar(2000) NOT NULL, 
+    recipe varchar(2000) NOT NULL, 
+    ingredients varchar(2000) NOT NULL, 
+    cooking_time numeric(6,1) NOT NULL CHECK(cooking_time > 0), 
+    category varchar(22) NOT NULL, 
+    difficulty varchar(21) DEFAULT 'легкое' NOT NULL, 
+    id_country integer NOT NULL REFERENCES countries(id), 
+    CHECK(category IN ('1-е блюдо', '2-е блюдо', 'салаты и закуски', 'десерт', 'безалкогольный напиток',
+                      'алкогольный напиток')), 
+    CHECK(difficulty IN ('легкое', 'для опытного кулинара', 'для профессионала'))
+); 
+```
 
