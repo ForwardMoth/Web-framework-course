@@ -98,4 +98,25 @@ CREATE TABLE dishes(
     CHECK(difficulty IN ('легкое', 'для опытного кулинара', 'для профессионала'))
 ); 
 ```
+## Вариант 6
+
+```sql 
+CREATE TABLE countries(
+    id integer PRIMARY KEY, 
+    name varchar(64)
+); 
+
+CREATE TABLE patient(
+    card_number numeric(15) PRIMARY KEY, 
+    last_name varchar(200) NOT NULL, 
+    first_name varchar(200) NOT NULL,
+    second_name varchar(200) NOT NULL,
+    reason varchar(2000) DEFAULT 'черепно-мозговая травма' NOT NULL,
+    polis_number numeric(10) NOT NULL UNIQUE, 
+    diagnosis varchar(2000) NOT NULL,
+    id_country integer NOT NULL REFERENCES countries(id), 
+    CHECK(polis_number > 0), 
+    UNIQUE(last_name, first_name, second_name)
+);
+```
 
