@@ -37,6 +37,25 @@ CREATE TABLE books(
     CHECK(year > 0 and pages_count > 0)
 ); 
 ```
+## Вариант 3
+```sql
+CREATE TABLE countries(
+    id integer PRIMARY KEY, 
+    name varchar(64)
+); 
+
+CREATE TABLE goods(
+    id integer PRIMARY KEY, 
+    name varchar(2000) NOT NULL UNIQUE,
+    storage_row numeric(3), 
+    row_place numeric(3), 
+    supplier varchar(2000) DEFAULT 'ОАО Царицынский мясокомбинат' NOT NULL,
+    count numeric(3) NOT NULL, 
+    price numeric(11, 2) NOT NULL,  
+    id_country integer NOT NULL REFERENCES countries(id), 
+    CHECK(storage_row > 0 and row_place > 0 and count > 0)
+);
+```
 
 ## Вариант 4 
 ```sql
