@@ -120,3 +120,20 @@ CREATE TABLE patient(
 );
 ```
 
+```sql 
+CREATE TABLE countries(
+    id integer PRIMARY KEY, 
+    name varchar(64)
+); 
+
+CREATE TABLE exhibits (
+    id varchar(32) PRIMARY KEY,
+    name varchar(2000) NOT NULL UNIQUE, 
+    collection varchar(2000) NOT NULL,
+    year numeric(4), 
+    technique varchar(2000) NOT NULL,
+    insurance_price numeric(10, 2) DEFAULT 20000 NOT NULL, 
+    id_country integer NOT NULL REFERENCES countries(id), 
+    CHECK(year > 1900) 
+);
+```
