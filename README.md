@@ -1,5 +1,7 @@
 # Домашние задания по курсу "Веб-разработка на основе современных свободных фреймворков"
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/ForwardMoth/Web-framework-course/blob/main/README.en.md)
+
 ## Раздел 1. "Разработка баз данных на основе СУБД PostgreSQL"
 
 - Домашнее задание 1. Создание таблиц ограничения целостности
