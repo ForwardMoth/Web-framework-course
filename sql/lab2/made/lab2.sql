@@ -1,6 +1,3 @@
--- Буданцев Артём Алексеевич
--- 4 вариант 
-
 -- 1 задание 
 SELECT first_name || ' ' || last_name as ФИО, salary as ОКЛАД, salary - ROUND(0.13 * salary, 2) 
 as "Оклад минус подоходный" FROM employees;
