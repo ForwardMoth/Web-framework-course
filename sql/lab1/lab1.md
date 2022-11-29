@@ -1,4 +1,13 @@
-## Вариант 1
+# Домашнее задание 1:
+1. [Вариант 1](#1)
+2. [Вариант 2](#2)
+3. [Вариант 3](#3)
+4. [Вариант 4](#4)
+5. [Вариант 5](#5)
+6. [Вариант 6](#6)
+7. [Вариант 7](#7)
+
+## Вариант 1 <a name="1"></a>
 ```sql
 CREATE TABLE countries(
     id NUMERIC(24) PRIMARY KEY, 
@@ -18,7 +27,7 @@ CREATE TABLE clients(
 );
 ```
 
-## Вариант 2
+## Вариант 2 <a name="2"></a>
 ```sql
 CREATE TABLE countries(
     id integer PRIMARY KEY, 
@@ -38,7 +47,7 @@ CREATE TABLE books(
 ); 
 ```
 
-## Вариант 3
+## Вариант 3 <a name="3"></a>
 ```sql
 CREATE TABLE countries(
     id integer PRIMARY KEY, 
@@ -58,7 +67,7 @@ CREATE TABLE goods(
 );
 ```
 
-## Вариант 4 
+## Вариант 4 <a name="4"></a>
 ```sql
 CREATE TABLE countries(
     id NUMERIC(3) PRIMARY KEY, 
@@ -78,7 +87,7 @@ CREATE TABLE schedule(
 );
 ```
 
-## Вариант 5
+## Вариант 5 <a name="5"></a>
 ```sql
 CREATE TABLE countries(
     id integer PRIMARY KEY, 
@@ -100,7 +109,7 @@ CREATE TABLE dishes(
 ); 
 ```
 
-## Вариант 6
+## Вариант 6 <a name="6"></a>
 ```sql 
 CREATE TABLE countries(
     id integer PRIMARY KEY, 
@@ -121,7 +130,7 @@ CREATE TABLE patient(
 );
 ```
 
-## Вариант 7 
+## Вариант 7 <a name="7"></a>
 ```sql 
 CREATE TABLE countries(
     id integer PRIMARY KEY, 
