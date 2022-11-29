@@ -56,19 +56,24 @@ ROUND(avg(salary), 2) as "Средняя зарплата" FROM employees GROUP 
 
 ### Задание 1
 ```sql
-
+SELECT NOW() as X;
 ```
 ### Задание 2
 ```sql
-
+SELECT postal_code FROM locations WHERE postal_code != '' AND postal_code IS NOT NULL;
 ```
 ### Задание 3
 ```sql
-
+SELECT first_name as Имя, last_name as Фамилия, 
+    CASE WHEN job_id = 'SA_REP' THEN 'Торговый представитель'
+         WHEN job_id = 'SA_MAN' THEN 'Менеджер по продажам'
+         ELSE 'Другое'
+         END AS Должность FROM employees;
 ```
 ### Задание 4
 ```sql
-
+SELECT job_id as Должность, max(salary) as "Максимальная зарплата", min(salary) as "Минимальная зарплата", 
+ROUND(avg(salary), 2) as "Средняя зарплата" FROM employees GROUP BY job_id;
 ```
 
 ## Вариант 4 <a name="4"></a>
@@ -98,55 +103,70 @@ ROUND(avg(salary), 2) as "Средняя зарплата" FROM employees GROUP 
 
 ### Задание 1
 ```sql
-
+SELECT i * 55 - i as X FROM (VALUES (1), (2), (3), (4), (5)) as X(i);
 ```
 ### Задание 2
 ```sql
-
+SELECT * FROM employees WHERE department_id = 50; 
 ```
 ### Задание 3
 ```sql
-
+SELECT first_name as Имя, last_name as Фамилия, 
+    CASE WHEN job_id = 'SA_REP' THEN 'Торговый представитель'
+         WHEN job_id = 'SA_MAN' THEN 'Менеджер по продажам'
+         ELSE 'Другое'
+         END AS Должность FROM employees;
 ```
 ### Задание 4
 ```sql
-
+SELECT job_id as Должность, max(salary) as "Максимальная зарплата", min(salary) as "Минимальная зарплата", 
+ROUND(avg(salary), 2) as "Средняя зарплата" FROM employees GROUP BY job_id;
 ```
 
 ## Вариант 6 <a name="6"></a>
 
 ### Задание 1
 ```sql
-
+SELECT first_name || ' ' || last_name as ФИО, salary as ОКЛАД, ROUND(salary * 1.302, 1) 
+as "Оклад с учётом начислений на оплату труда" FROM employees;
 ```
 ### Задание 2
 ```sql
-
+SELECT first_name as Имя, last_name as Фамилия, salary as Оклад, commission_pct as "Ставка комиссии" FROM employees
+WHERE salary >= 10000 AND commission_pct IS NOT NULL ORDER BY commission_pct desc;
 ```
 ### Задание 3
 ```sql
-
+SELECT first_name as Имя, last_name as Фамилия,  
+    CASE WHEN commission_pct IS NULL THEN 0 
+    ELSE commission_pct END as "Ставка комиссии" FROM employees;
 ```
 ### Задание 4
 ```sql
-
+SELECT ROUND(max(salary)) as "Максимальная зарплата", ROUND(min(salary)) as "Минимальная зарплата", 
+ROUND(avg(salary), 2) as "Средняя зарплата" FROM employees;
 ```
 
 ## Вариант 7 <a name="7"></a>
 
 ### Задание 1
 ```sql
-
+SELECT ((30 * 20) / 10) + (20 * 10) as X;
 ```
 ### Задание 2
 ```sql
-
+SELECT * FROM employees WHERE department_id != 50;
 ```
 ### Задание 3
 ```sql
-
+SELECT first_name as Имя, last_name as Фамилия, 
+    CASE WHEN job_id = 'SA_REP' THEN 'Торговый представитель'
+         WHEN job_id = 'SA_MAN' THEN 'Менеджер по продажам'
+         ELSE 'Другое'
+         END AS Должность FROM employees;
 ```
 ### Задание 4
 ```sql
-
+SELECT ROUND(max(salary)) as "Максимальная зарплата", ROUND(min(salary)) as "Минимальная зарплата", 
+ROUND(avg(salary), 2) as "Средняя зарплата" FROM employees;
 ```
