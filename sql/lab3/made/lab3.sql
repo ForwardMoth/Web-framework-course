@@ -1,6 +1,3 @@
--- 4 вариант 
--- Буданцев Артём Алексеевич
-
 -- 1 задание 
 SELECT first_name, last_name, department_name 
     FROM employees e, departments d 
