@@ -1,0 +1,50 @@
+.main {
+  background: #F0FFF0
+}
+
+h1 {
+  text-align: center;
+  color: #00008B;
+  font-weight: bold;
+  font-size: 3em;
+
+}
+
+.block {
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  margin-left: 1.5em;
+  margin-right: 1.2em;
+  text-align: justify;
+}
+
+p {
+  text-indent: 2em;
+  font-size: 32px;
+}
+
+.li {
+  padding: 0 2em 0 3em;
+  display: inline-block;
+}
+
+img{
+  position: relative;
+  left: 90em;
+  bottom: 50px;
+  height: 300px; /* Высота области */
+  weight: 150px;
+  margin: 0; /* Обнуляем отступы */
+}
+
+li {
+  display: inline-block;
+  font-size: 40px;
+  width: 600px;
+  color: black;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}

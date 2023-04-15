@@ -1,0 +1,60 @@
+.page1 {
+  background: #87CEFA
+}
+
+a {
+  text-decoration: none;
+  color: #008000;
+}
+
+#id1{
+  font-size: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #00008B;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+div {
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  margin-left: 1.5em;
+  margin-right: 1.2em;
+  text-align: justify;
+}
+
+p{
+  text-indent: 20px;
+  font-size: 26px;
+}
+
+h3{
+  font-size: 30px;
+  font-style: oblique;
+}
+
+.img{
+  padding-top: 1em;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.lst {
+  padding: 0 2em 0 1.5em;
+  font-size: 26px;
+}
+
+ul {
+  line-height: 1.5em;
+  margin: 0;
+  color: navy;
+}
+
+.el {
+  color: #191970;
+  font-size: 24px;
+}
